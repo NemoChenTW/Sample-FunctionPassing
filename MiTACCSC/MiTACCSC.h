@@ -10,6 +10,9 @@
 
 #include <stddef.h>
 
+//void func ( void (*f)(void) );
+typedef void (*f)(void);
+
 class MiTACCSC {
 private:
 	void *funPtr = NULL;
