@@ -17,15 +17,15 @@ typedef void (*f)(void);
 
 class MiTACCSC {
 private:
-	void *funPtr = NULL;
-
+//	void *funPtr = NULL;
+	f *funPtr;
 public:
 	MiTACCSC();
 	virtual ~MiTACCSC();
 
-	void setFunPtr(void * funPtr)
+	void setFunPtr(f func)
 	{
-		this->funPtr = funPtr;
+		funPtr = &func;
 	}
 
 

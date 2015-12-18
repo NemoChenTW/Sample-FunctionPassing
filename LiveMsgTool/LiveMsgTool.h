@@ -22,10 +22,10 @@ public:
 	LiveMsgTool();
 	virtual ~LiveMsgTool();
 
-	void *EntryAlive()
+	void EntryAlive()
 	{
+		cout << "run EntryAlive." << endl;
 		msgEntry = "Entry";
-		return NULL;
 	}
 
 	void *ExitAlive()
