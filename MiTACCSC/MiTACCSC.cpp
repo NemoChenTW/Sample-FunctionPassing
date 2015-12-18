@@ -23,7 +23,7 @@ void MiTACCSC::runFun()
 {
 	if(funPtr != NULL)
 	{
-		*funPtr;
+//		*funPtr;
 	}
 	else
 	{
