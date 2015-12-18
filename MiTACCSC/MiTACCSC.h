@@ -9,6 +9,8 @@
 #define MITACCSC_MITACCSC_H_
 
 #include <stddef.h>
+#include <iostream>
+using namespace std;
 
 //void func ( void (*f)(void) );
 typedef void (*f)(void);

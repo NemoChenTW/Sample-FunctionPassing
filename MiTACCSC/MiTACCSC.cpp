@@ -7,9 +7,6 @@
 
 #include "MiTACCSC.h"
 
-#include <iostream>
-using namespace std;
-
 MiTACCSC::MiTACCSC() {
 	// TODO Auto-generated constructor stub
 

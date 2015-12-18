@@ -9,7 +9,7 @@
 #define LIVEMSGTOOL_LIVEMSGTOOL_H_
 
 #include <string>
-
+#include <iostream>
 using namespace std;
 
 class LiveMsgTool {

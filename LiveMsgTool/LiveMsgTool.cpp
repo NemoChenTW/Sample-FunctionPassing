@@ -6,9 +6,6 @@
  */
 
 #include "LiveMsgTool.h"
-#include <iostream>
-
-using namespace std;
 
 LiveMsgTool::LiveMsgTool() {
 	msgEntry = "NULL";
