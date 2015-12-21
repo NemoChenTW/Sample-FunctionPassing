@@ -34,6 +34,7 @@ int main()
 //	entryReader->setFunPtr( fPtr );
 //	entryReader->setFunPtr( (f)(&LiveMsgTool::EntryAlive) );
 
+	cout << endl << "Prepare run function" << endl;
 	entryReader->runFun();
 	exitReader->runFun();
 

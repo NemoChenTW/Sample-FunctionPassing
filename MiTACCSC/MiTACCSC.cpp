@@ -20,6 +20,7 @@ void MiTACCSC::runFun()
 {
 	if(funPtr != NULL)
 	{
+		cout << "funPtr is not NULL." << endl;
 //		*funPtr;
 	}
 	else
