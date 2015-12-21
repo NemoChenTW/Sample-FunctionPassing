@@ -23,4 +23,6 @@ void LiveMsgTool::showMsg()
 
 	cout << "EntryMessage = "	<< msgEntry	<< endl;
 	cout << "ExitMessage = "	<< msgExit	<< endl;
+
+	cout << endl;
 }
