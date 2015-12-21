@@ -19,14 +19,14 @@ int main()
 
 	LiveMsgTool *liveMsg = new LiveMsgTool();
 
-	void (LiveMsgTool::*lmsgEntryfun)() = &LiveMsgTool::EntryAlive;
-	void (LiveMsgTool::*lmsgExitfun)() = &LiveMsgTool::ExitAlive;
+	LiveMsgTool::LiveMsgMemberFunc entryFun = &LiveMsgTool::EntryAlive;
+	LiveMsgTool::LiveMsgMemberFunc exitFun = &LiveMsgTool::ExitAlive;
 
 	cout << "First show" << endl;
 	liveMsg->showMsg();
 
-	(liveMsg->*lmsgEntryfun)();
-	(liveMsg->*lmsgExitfun)();
+	(liveMsg->*entryFun)();
+	(liveMsg->*exitFun)();
 
 //	f fPtr = (f)(&LiveMsgTool::EntryAlive);
 //	fPtr();

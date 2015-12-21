@@ -13,7 +13,8 @@
 using namespace std;
 
 class LiveMsgTool {
-
+public:
+	typedef void (LiveMsgTool::*LiveMsgMemberFunc)();
 private:
 	string msgEntry;
 	string msgExit;
