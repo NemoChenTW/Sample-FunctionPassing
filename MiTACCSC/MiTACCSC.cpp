@@ -18,7 +18,11 @@ MiTACCSC::~MiTACCSC() {
 
 void MiTACCSC::setFunPtr(f func)
 {
+	cout << endl << "In setFunPtr" << endl;
+
 	funPtr = &func;
+
+	cout << "End setFunPtr" << endl << endl;
 }
 
 void MiTACCSC::runFun()
