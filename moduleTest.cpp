@@ -22,7 +22,11 @@ int main()
 	cout << "First show" << endl;
 	liveMsg->showMsg();
 
-	entryReader->setFunPtr( (f)(&LiveMsgTool::EntryAlive) );
+	f fPtr = (f)(&LiveMsgTool::EntryAlive);
+	fPtr();
+
+	entryReader->setFunPtr( fPtr );
+//	entryReader->setFunPtr( (f)(&LiveMsgTool::EntryAlive) );
 
 	entryReader->runFun();
 	exitReader->runFun();
