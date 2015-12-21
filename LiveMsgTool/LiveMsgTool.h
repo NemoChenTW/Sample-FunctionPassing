@@ -25,7 +25,7 @@ public:
 	void EntryAlive()
 	{
 		cout << "run EntryAlive." << endl;
-//		msgEntry = "Entry";
+		msgEntry = "Entry";
 	}
 
 	void ExitAlive()
