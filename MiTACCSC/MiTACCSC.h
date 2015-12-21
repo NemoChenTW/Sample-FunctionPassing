@@ -23,11 +23,7 @@ public:
 	MiTACCSC();
 	virtual ~MiTACCSC();
 
-	void setFunPtr(f func)
-	{
-		funPtr = &func;
-	}
-
+	void setFunPtr(f func);
 
 	void runFun();
 

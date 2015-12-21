@@ -16,6 +16,11 @@ MiTACCSC::~MiTACCSC() {
 	// TODO Auto-generated destructor stub
 }
 
+void MiTACCSC::setFunPtr(f func)
+{
+	funPtr = &func;
+}
+
 void MiTACCSC::runFun()
 {
 	if(funPtr != NULL)
