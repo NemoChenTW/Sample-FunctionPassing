@@ -10,20 +10,18 @@
 
 #include <stddef.h>
 #include <iostream>
+#include <functional>
 using namespace std;
-
-//void func ( void (*f)(void) );
-typedef void (*f)(void);
 
 class MiTACCSC {
 private:
-//	void *funPtr = NULL;
-	f *funPtr;
+	function<void(void)> funPtr;
+
 public:
 	MiTACCSC();
 	virtual ~MiTACCSC();
 
-	void setFunPtr(f func);
+	void setFunPtr(function<void(void)> fun);
 
 	void runFun();
 

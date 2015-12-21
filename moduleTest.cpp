@@ -19,23 +19,18 @@ int main()
 
 	LiveMsgTool *liveMsg = new LiveMsgTool();
 
-	LiveMsgTool::LiveMsgMemberFunc entryFun = &LiveMsgTool::EntryAlive;
-	LiveMsgTool::LiveMsgMemberFunc exitFun = &LiveMsgTool::ExitAlive;
-
 	cout << "First show" << endl;
 	liveMsg->showMsg();
 
-//	(liveMsg->*entryFun)();
-//	(liveMsg->*exitFun)();
 
-//	f fPtr = (f)(&LiveMsgTool::EntryAlive);
-//	fPtr();
+	// Set Entry function
+	auto entryFp = std::bind(&LiveMsgTool::EntryAlive, liveMsg);
+	entryReader->setFunPtr(entryFp);
 
-//	typedef void (LiveMsgTool::*LiveMsgMemberFunc)();
-//	typedef void (*f)(void);
+	// Set Exit function
+	auto exitFp = std::bind(&LiveMsgTool::ExitAlive, liveMsg);
+	exitReader->setFunPtr(exitFp);
 
-	entryReader->setFunPtr( (f)(liveMsg->*entryFun) );
-//	entryReader->setFunPtr( (f)(&LiveMsgTool::EntryAlive) );
 
 	cout << endl << "Prepare run function" << endl;
 	entryReader->runFun();

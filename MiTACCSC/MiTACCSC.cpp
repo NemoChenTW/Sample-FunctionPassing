@@ -16,13 +16,9 @@ MiTACCSC::~MiTACCSC() {
 	// TODO Auto-generated destructor stub
 }
 
-void MiTACCSC::setFunPtr(f func)
+void MiTACCSC::setFunPtr(function<void(void)> fun)
 {
-	cout << endl << "In setFunPtr" << endl;
-
-	funPtr = &func;
-
-	cout << "End setFunPtr" << endl << endl;
+	funPtr = fun;
 }
 
 void MiTACCSC::runFun()
@@ -30,7 +26,7 @@ void MiTACCSC::runFun()
 	if(funPtr != NULL)
 	{
 		cout << "funPtr is not NULL." << endl;
-//		*funPtr;
+		funPtr();
 	}
 	else
 	{
