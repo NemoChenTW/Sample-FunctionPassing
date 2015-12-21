@@ -28,10 +28,10 @@ public:
 //		msgEntry = "Entry";
 	}
 
-	void *ExitAlive()
+	void ExitAlive()
 	{
+		cout << "run ExitAlive." << endl;
 		msgExit = "Exit";
-		return NULL;
 	}
 
 	void showMsg();
