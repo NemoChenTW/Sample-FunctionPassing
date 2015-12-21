@@ -25,13 +25,16 @@ int main()
 	cout << "First show" << endl;
 	liveMsg->showMsg();
 
-	(liveMsg->*entryFun)();
-	(liveMsg->*exitFun)();
+//	(liveMsg->*entryFun)();
+//	(liveMsg->*exitFun)();
 
 //	f fPtr = (f)(&LiveMsgTool::EntryAlive);
 //	fPtr();
 
-//	entryReader->setFunPtr( fPtr );
+//	typedef void (LiveMsgTool::*LiveMsgMemberFunc)();
+//	typedef void (*f)(void);
+
+	entryReader->setFunPtr( (f)(liveMsg->*entryFun) );
 //	entryReader->setFunPtr( (f)(&LiveMsgTool::EntryAlive) );
 
 	cout << endl << "Prepare run function" << endl;
